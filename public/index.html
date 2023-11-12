@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,100;1,200;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>newsletterForm</title>
+  </head>
+  <body class="font-[Poppins] sm:bg-indigo-900 md:bg-indigo-900">
+    <main
+      class="flex sm:min-h-screen sm:p-[10px] md:min-h-screen sm:justify-center sm:items-center md:justify-center md:items-center flex-col"
+    >
+      <div
+        class="w-full flex flex-col sm:flex-row sm:bg-white h-[530px] md:flex-row md:max-w-[900px] md:bg-white sm:rounded-md md:rounded-3xl"
+        id="newsLetter"
+      >
+        <div
+          class="w-full sm:w-1/2 md:w-1/2 md:order-first sm:order-first px-[25px] md:p-[20px] sm:ml-[15px] md:ml-[25px]"
+        >
+          <h1 class="text-2xl mt-[10px] font-bold sm:mt-[40px] md:text-4xl md:mt-[30px]">
+            Stay Updated!
+          </h1>
+          <p
+            class="text-xs font-bold mt-[10px] sm:mt-[20px] md:text-sm md:mt-[20px] text-gray-500"
+          >
+            join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div
+            class="flex flex-col gap-[15px] mt-[10px] sm:mt-[20px] md:mt-[20px]"
+          >
+            <p
+              class="flex items-center gap-[8px] text-xs md:text-sm text-gray-500 font-bold"
+            >
+              <img class="w-[6%]" src="../images/icon-list.svg" alt="icon" />
+              Product discovery and building what matter
+            </p>
+            <p
+              class="flex items-center gap-[8px] text-xs md:text-sm text-gray-500 font-bold"
+            >
+              <img class="w-[6%]" src="../images/icon-list.svg" alt="icon" />
+              Measuring to ensure updates are a success
+            </p>
+            <p
+              class="flex items-center gap-[8px] text-xs md:text-sm text-gray-500 font-bold"
+            >
+              <img class="w-[6%]" src="../images/icon-list.svg" alt="icon" />
+              And much more!
+            </p>
+          </div>
+          <form
+            class="flex flex-col gap-[8px] mb-[20px] sm:mt-[20px] md:mt-[20px]"
+          >
+            <label class="text-xs font-bold text-gray-500 mt-[10px]" for=""
+              >Email address</label
+            >
+            <input
+              type="text"
+              placeholder="email@gmail.com"
+              class="rounded w-full p-[8px] border outline-none focus:border-gray-500 placeholder:text-[#E5E7EB] placeholder:text-sm"
+              id="email"
+            />
+            <p class="hidden text-red-500" id="mailErr">input a vaild email</p>
+            <button
+              class="bg-blue-950 p-[9px] md:p-[10px] md:mt-[15px] rounded text-white text-[13px] focus:outline-none cursor-pointer hover:bg-gradient-to-r from-pink-600 to-amber-700"
+              id="summit"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <div
+          class="w-full order-first sm:w-1/2 md:w-1/2 md:py-[20px] sm:overflow-hidden sm:p-[20px]"
+        >
+          <img
+            class="block h-auto  w-full sm:hidden md:hidden object-cover"
+            src="../images/illustration-sign-up-mobile.svg"
+            alt="mobile"
+          />
+          <img
+            class="hidden md:block sm:block sm:h-auto object-cover md:mx-auto md:h-full"
+            src="../images/illustration-sign-up-desktop.svg"
+            alt="desktop"
+          />
+        </div>
+      </div>
+
+      <div
+        class="bg-white w-full max-w-[380px]  flex-col gap-[20px] p-[20px] md:p-[36px] rounded-md hidden"
+        id="subscribtion"
+      >
+        <img
+          class="w-12 mt-[60px] md:mt-[10px]"
+          src="../images/icon-success.svg"
+          alt=""
+        />
+        <h1 class="text-4xl font-bold">Thanks for subscribing!</h1>
+        <p class="text-sm text-gray-500 font-bold leading-6">
+          A confimation email has been sent to
+          <span class="text-gray-900" id="userEmail"></span> please open it and click the
+          button inside to confirm your subscribtion
+        </p>
+        <button
+          class="bg-indigo-900 p-[10px] rounded-md cursor-pointer hover:bg-gradient-to-r from-pink-600 to-amber-700 text-white text-sm mt-[70px] md:mt-0"
+          id="dismiss_btn"
+        >
+          Dismiss message
+        </button>
+      </div>
+    </main>
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
